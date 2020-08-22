@@ -1,0 +1,137 @@
+.display-4 {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 40px;
+    /* margin-left: 500px; */
+    padding:0px;
+    margin-top: 10px;  
+}
+
+#resultDisplay{
+    padding-top: 100px;
+}
+
+#scoreDispaly{
+    padding-top: 100px;
+}
+
+.titleText{
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 40px;
+    margin-top: -30px;
+}
+
+.jumbotron {
+    background-color: white;
+    margin-top: 0px;
+    padding-bottom: 50px;
+    padding-top:20px;
+}
+
+/* title image responsive style */
+.img-responsive {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;  
+  }
+
+
+.navi-logo {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    max-width: 20%;  
+}
+
+  .btn-lg{
+    align-items: center;
+  }
+
+  p .top-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  .resultTitle {
+      margin-top: 100px;
+  }
+
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+
+  /* result images css */
+  .img-responsive-result {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 70%;  */
+    width:  300px;
+    height: 300px;
+    border-radius: 50%;
+    background-position: left top;
+    border: 1px solid #c51902; 
+    background: radial-gradient(circle, rgba(254,129,0,1) 0%, rgba(255,0,0,1) 86%, rgba(255,0,0,1) 100%);
+
+}
+
+
+  /* cmedia enquiries */
+
+@media screen and (max-width: 823px) {
+ 
+}
+
+
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 568px) {
+
+}
+    
+
+
+@media screen and (max-width: 415px) {
+
+}
+
+@media screen and (max-width: 375px) {
+    /* .display-4 {
+        text-align: center;
+        padding-top: 70px;
+        font-family: 'Bangers', cursive;
+        font-size: 30px;
+        /* margin-left: 500px; */
+        /* padding:0px;
+    } */
+
+}
+
+
+
+@media screen and (max-width: 370px) {
+
+}
