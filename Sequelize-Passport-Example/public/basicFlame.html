@@ -24,17 +24,21 @@
 
 <body>
 
-    <!-- Navigation -->
-
-    <div class="jumbotron jumbotron-fluid">
-        <!-- <h1 class="display-4">Professor Oak’s </h1> -->
+       <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid" id="titleBackground">
+        <!-- jumbotron image -->
         <img src="images/title.png" alt="pokemon logo" class="img-responsive">
-        <!-- <img src="images/Professor_Oak.png" alt="pokemon logo" class="img-responsive2" > -->
-        <!-- <h1 class="display-4 titleText">Love Calculator</h1> -->
-        <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+        
+        <audio controls loop >
+            <source src="audio/103.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+    
+
     </div>
 
-    <!-- content -->
+  
+    <!-- First row -->
     <div class="container">
         <div class="row">
 
@@ -59,12 +63,13 @@
                             placeholder="Type name of your potencial match">
                     </div>
                     <!-- <button type="submit" class="btn btn-primary">Let's calculate</button> -->
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Let's calculate</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="calBtn">Let's calculate</button>
 
                 </form>
             </div>
         </div>
 
+<!-- Second Row / Result display field -->
         <div class="row" id ="resultDisplay">
             <div class="col-lg-6">
                 <!-- PokeMon Image Comes here -->
@@ -79,11 +84,13 @@
                 <p class="result-text"></p>
 
                 <!-- Button to see score -->
-                <button type="button" class="btn btn-primary btn-lg btn-block" id="seeScore">Click here to see the
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="scoreBtn">Click here to see the
                     highest scores</button>
             </div>
         </div>
 
+
+<!-- Third Row / Table display feild -->
         <div class="row" id ="scoreDispaly">
 
             <div class="col-lg-12">
@@ -136,9 +143,9 @@
     </div>
 
 
-    <!-- <footer>
-        <p>© 2020 Angus, Declan, Thomas, Jeff and Nobu All rights reserved. </p>
-    </footer>  -->
+    <footer>
+        <p class="footer-text">© 2020 Angus, Declan, Thomas, Jeff and Nobu All rights reserved. </p>
+    </footer> 
 
 
 </body>
