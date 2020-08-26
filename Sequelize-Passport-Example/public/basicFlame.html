@@ -19,7 +19,7 @@
     <!-- Reset CSS-->
     <!-- Customize CSS-->
     <link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -39,10 +39,10 @@
         <div class="row">
 
             <div class="col-lg-6">
-                <p class="top-text">Welcome to Professor Oak’s Pokemon Love Calculator!The Professor has calculated a
-                    precise formula to
-                    determine whether you and your love are truly compatible! Your compatibility will be scientifically
-                    explained withthehelp if his most trusted Pokémon.Enter your names below to test your compatibility
+                <p class="top-text">Welcome to Professor Oak’s Pokemon Love Calculator! The Professor has calculated a
+                    precise formula to determine whether you and someone you fancy are truly compatible! Along with your love 
+                    compatibility rating, Professor Oak will scroll through his Pokedex and choose a Pokemon that best describes
+                    your chances of making it work! Enter your names below to test your compatibility
                     – if you dare!</p>
             </div>
 
@@ -59,24 +59,29 @@
                             placeholder="Type name of your potencial match">
                     </div>
                     <!-- <button type="submit" class="btn btn-primary">Let's calculate</button> -->
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Let's calculate</button>
+                    <button type="button" id="buttonID" class="btn btn-primary btn-lg btn-block">Let's calculate</button>
 
                 </form>
             </div>
         </div>
 
+        
+
         <div class="row" id ="resultDisplay">
             <div class="col-lg-6">
-                <!-- PokeMon Image Comes here -->
-                <img src="images/Pokémon_Pikachu_art.png" alt="pokemon logo" class="img-responsive-result"
-                    id="resultImage">
+                <!--"Your compatibility rating is:" gets written here-->
+                <div id="resultDescription"></div>
+                <!--The compatibility rating (e.g. 78%) gets written here-->
+                <div id="result"></div>
             </div>
             <div class="col-lg-6">
-                <!-- Name of Pokemon here -->
-                <h2 class="resultTitle">Your Love is a Pikachu!</h2>
 
-                <!-- Text comes here -->
-                <p class="result-text"></p>
+                <!-- Name of Pokemon here -->
+                <h2 id="pokemonChosen"></h2>
+                <!-- PokeMon Image Comes here (Do we add alt text in script.js?) -->
+                <div id="pokemonImage"></div>
+                <!-- Description of Pokemon / Love compatibility goes here -->
+                <p id="pokemonDescription"></p>
 
                 <!-- Button to see score -->
                 <button type="button" class="btn btn-primary btn-lg btn-block" id="seeScore">Click here to see the
@@ -139,6 +144,7 @@
     <!-- <footer>
         <p>© 2020 Angus, Declan, Thomas, Jeff and Nobu All rights reserved. </p>
     </footer>  -->
+    <script src="./script.js"></script>
 
 
 </body>
