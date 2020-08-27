@@ -10,6 +10,7 @@ body {
     background-size: auto;
 }
 
+/* bootstrap column seeting */
 .display-4 {
     text-align: center;
     font-family: 'Bangers', cursive;
@@ -18,14 +19,58 @@ body {
     margin-top: 10px;  
 }
 
+
+/* result feild setting */
 #resultDisplay{
     padding-top: 100px;
 }
 
-#scoreDispaly{
-    padding-top: 100px;
+#resultDescription{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Bangers', cursive;
+  color: #ffffff;
+  text-align: center;
 }
 
+#result{
+  /* padding: 5px; */
+  font-size: 128px;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+#pokemonDescription{
+  padding:10px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+}
+
+#pokemonChosen{
+  margin: 20px;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Bangers', cursive;
+  color: #ffffff;
+  text-align: center;
+
+}
+
+#pokemonImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* score feild setting */
+#scoreDispaly{
+  padding-top: 100px;
+}
 
 /* jumbotron title image responsive style */
 .img-responsive {
