@@ -1,8 +1,19 @@
+body {
+    background: red;
+  }
+
+.jumbotron {
+    margin-top: 0px;
+    padding-bottom: 50px;
+    padding-top:20px;
+    background-image: url("../images/background.png");
+    background-size: auto;
+}
+
 .display-4 {
     text-align: center;
     font-family: 'Bangers', cursive;
     font-size: 40px;
-    /* margin-left: 500px; */
     padding:0px;
     margin-top: 10px;  
 }
@@ -15,21 +26,8 @@
     padding-top: 100px;
 }
 
-.titleText{
-    text-align: center;
-    font-family: 'Bangers', cursive;
-    font-size: 40px;
-    margin-top: -30px;
-}
 
-.jumbotron {
-    background-color: white;
-    margin-top: 0px;
-    padding-bottom: 50px;
-    padding-top:20px;
-}
-
-/* title image responsive style */
+/* jumbotron title image responsive style */
 .img-responsive {
     display: block;
     height: auto;
@@ -52,24 +50,58 @@
     align-items: center;
   }
 
-  p .top-text {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 300;
+  h2 {
+      color:white;
+      text-align: center;
   }
+
+  p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+
+  audio { 
+      position:absolute;
+      top:20px;
+      left:20px;
+      width: 100px; 
+      height: 30px;
+}
+
+
+  .btn {
+    background: black;
+    border-color: BLACK;
+    border-radius: 50px;
+  }
+
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #ffcb05;
+    border-color: #ffcb05; /*set the color you want here*/
+}
+
+  .form-control{
+    border-radius: 50px;
+  }
+    
 
   .resultTitle {
       margin-top: 100px;
+      text-align: center;
   }
 
 
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 95%;
+    background-color: #ffffff;
+    width: 100%;
   }
   
   td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #919191;
     text-align: left;
     padding: 8px;
   }
@@ -85,7 +117,6 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    /* max-width: 70%;  */
     width:  300px;
     height: 300px;
     border-radius: 50%;
@@ -95,6 +126,16 @@
 
 }
 
+.footer-text{
+    background-color: black;
+    margin-top:70px;
+    margin-bottom:0px;
+    padding:20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
 
   /* cmedia enquiries */
 
@@ -102,7 +143,26 @@
  
 }
 
-
+@media screen and (max-width: 768px) {
+    .jumbotron {
+        margin-top: 0px;
+        padding-bottom: 50px;
+        padding-top:20px;
+        background-image: url("../images/background.png");
+        background-size: 150%;
+    }
+    .img-responsive {
+        display: block;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;  
+      }
+      .top-text {
+        font-size: 20px;
+        padding-bottom:20px;
+    }
+}
 
 @media screen and (max-width: 640px) {
 
@@ -112,26 +172,187 @@
 
 }
     
+@media screen and (max-width: 450px) {
+    .jumbotron {
+        margin-top: 0px;
+        padding-bottom: 50px;
+        padding-top:20px;
+        background-image: url("../images/background.png");
+        background-size: 150%;
+    }
+    .img-responsive {
+        display: block;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;  
+      }
+      .top-text {
+        font-size: 13px;
+        padding-bottom:20px;
+    }
+}
 
+@media screen and (max-width: 414px) {
+  
+  audio { 
+    position: fixed; /* fixed audio control */
+    padding: 10px;
+    top:690px;
+    left:0px;
+    width: 100%; 
+    height: 50px;
+    background-color: white;
+    z-index: 3;
+}
+}
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 411px) {
+  .jumbotron {
+    margin-top: 0px;
+    padding-bottom: 50px;
+    padding-top:20px;
+    background-image: url("../images/background.png");
+    background-size: 170%;
+    height: 330px;
+}
+.img-responsive {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;  
+  margin-top: 10%;
+}
 
+  audio { 
+    position: fixed; /* fixed audio control */
+    padding-bottom: 20px;
+    left:0px;
+    width: 100%; 
+    height: 60px;
+    background-color: white;
+    z-index: 1;
+    top: 93%;
+    bottom: 0;
+}
 }
 
 @media screen and (max-width: 375px) {
-    /* .display-4 {
-        text-align: center;
-        padding-top: 70px;
-        font-family: 'Bangers', cursive;
-        font-size: 30px;
-        /* margin-left: 500px; */
-        /* padding:0px;
-    } */
+  .jumbotron {
+    margin-top: 0px;
+    padding-bottom: 50px;
+    padding-top:20px;
+    background-image: url("../images/background.png");
+    background-size: 180%;
+    height: 290px;
+}
+.img-responsive {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;  
+  margin-top: 10%;
+}
 
+  audio { 
+    position: fixed; /* fixed audio control */
+    padding-bottom: 20px;
+    left:0px;
+    width: 100%; 
+    height: 60px;
+    background-color: white;
+    z-index: 1;
+    top: 93%;
+    bottom: 0;
+}
+}
+
+@media screen and (max-width: 360px) {
+
+  audio { 
+    position: fixed; /* fixed audio control */
+    padding: 10px;
+    top:590px;
+    left:0px;
+    width: 100%; 
+    height: 50px;
+    background-color: white;
+    z-index: 3;
+    bottom: 0;
+}
+}
+
+@media screen and (max-width: 320px) {
+
+  .jumbotron {
+    margin-top: 0px;
+    padding-bottom: 50px;
+    padding-top:20px;
+    background-image: url("../images/background.png");
+    background-size: 180%;
+    height: 180px;
+}
+.img-responsive {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;  
+  margin-top: 2%;
+}
+
+  audio { 
+    position: fixed; /* fixed audio control */
+    padding-bottom: 20px;
+    left:0px;
+    width: 100%; 
+    height: 60px;
+    background-color: white;
+    z-index: 1;
+    top: 90%;
+    bottom: 0;
+}
 }
 
 
 
-@media screen and (max-width: 370px) {
 
+@media screen and (max-width: 280px) {
+    body {
+        shape-margin: 0px;
+        padding:0px;
+        width: 113%;
+    }
+
+    .jumbotron {
+      margin-top: 0px;
+      padding-bottom: 50px;
+      padding-top:20px;
+      background-image: url("../images/background.png");
+      background-size: 190%;
+      height: 300px;
+  }
+  .img-responsive {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;  
+    margin-top: 15%;
+  }
+  
+    audio { 
+      position: fixed; /* fixed audio control */
+      padding-bottom: 20px;
+      left:0px;
+      width: 100%; 
+      height: 60px;
+      background-color: white;
+      z-index: 1;
+      top: 92%;
+      bottom: 0;
+  }
+  
 }
