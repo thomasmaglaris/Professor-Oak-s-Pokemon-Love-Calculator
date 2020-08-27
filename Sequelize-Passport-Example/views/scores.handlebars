@@ -1,0 +1,26 @@
+<h2>Best Couples</h2>
+
+<table>
+  <tr>
+    {{!-- <th>Rank</th> --}}
+    <th>Name One</th>
+    <th>Name Two</th>
+    <th>Compatability</th>
+  </tr>
+
+  {{#each couple}}
+  <tr>
+    {{!-- <td>{{dataValues.id}}</td> --}}
+    <td>{{dataValues.name1}}</td>
+    <td>{{dataValues.name2}}</td>
+    <td>{{dataValues.compatability}}</td>
+
+  </tr>
+  {{/each}}
+</table>
+
+<br><br><br>
+<a href="/">
+  <button type="button" class="btn btn-primary btn-lg btn-block">
+    Go Back
+  </button>

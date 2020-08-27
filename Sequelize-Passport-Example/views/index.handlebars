@@ -1,0 +1,58 @@
+<!-- First row -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <p class="top-text">Welcome to Professor Oak’s Pokemon Love Calculator! The Professor has calculated a
+        precise formula to determine whether you and someone you fancy are truly compatible! Along with your love
+        compatibility rating, Professor Oak will scroll through his Pokedex and choose a Pokemon that best describes
+        your chances of making it work! Enter your names below to test your compatibility
+        – if you dare!</p>
+    </div>
+
+    <div class="col-lg-6">
+
+      <form>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">Email address</label> -->
+          <input type="text" class="form-control" id="myName" placeholder="Type your name">
+        </div>
+        <div class="form-group">
+          <!-- <label for="exampleInputPassword1">Password</label> -->
+          <input type="text" class="form-control" id="anotherName" placeholder="Type name of your potencial match">
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Let's calculate</button> -->
+
+        <button type="button" id="buttonID" class="btn btn-primary btn-lg btn-block">Let's calculate</button>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Second Row / Result display field -->
+
+  <div class="row" id="resultDisplay">
+    <div class="col-lg-6">
+      <!--"Your compatibility rating is:" gets written here-->
+      <h2 id="resultDescription"></h2>
+      <!--The compatibility rating (e.g. 78%) gets written here-->
+      <div id="result"></div>
+    </div>
+    <div class="col-lg-6">
+
+      <!-- Name of Pokemon here -->
+      <h2 id="pokemonChosen"></h2>
+      <!-- PokeMon Image Comes here (Do we add alt text in script.js?) -->
+      <div id="pokemonImage"></div>
+      <!-- Description of Pokemon / Love compatibility goes here -->
+      <p id="pokemonDescription"></p>
+
+      <!-- Button to see score -->
+      <a href="/all">
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="scoreBtn">
+          Click here to see the most compatible couples!
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
