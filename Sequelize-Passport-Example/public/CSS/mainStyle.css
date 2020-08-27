@@ -1,6 +1,6 @@
 body {
-    background: red;
-  }
+    background: linear-gradient(to bottom, red -18%, #e20a0a 100%);    
+}
 
 .jumbotron {
     margin-top: 0px;
@@ -59,6 +59,25 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     color: white;
+  }
+
+  #result {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    font-size: 128px;
+  }
+
+  #pokemonImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  #pokemonDescription {
+    text-align: center;
   }
 
   audio { 
@@ -139,8 +158,10 @@ body {
 
   /* cmedia enquiries */
 
-@media screen and (max-width: 823px) {
- 
+@media screen and (max-width: 1024px) {
+  #pokemonImage {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
