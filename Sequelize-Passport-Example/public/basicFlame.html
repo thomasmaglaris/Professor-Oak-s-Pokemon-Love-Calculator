@@ -2,152 +2,224 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor Oak’s Pokémon Love Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professor Oak’s Pokémon Love Calculator</title>
 
-    <!-- reset css -->
-    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+  <!-- reset css -->
+  <link rel="stylesheet" type="text/css" href="CSS/reset.css">
 
-    <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- google font-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Reset CSS-->
-    <!-- Customize CSS-->
-    <link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Reset CSS-->
+  <!-- Customize CSS-->
+  <link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-       <!-- jumbotron -->
-    <div class="jumbotron jumbotron-fluid" id="titleBackground">
-        <!-- jumbotron image -->
-        <img src="images/title.png" alt="pokemon logo" class="img-responsive">
-        
-        <audio controls loop >
-            <source src="audio/103.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-          </audio>
-    
+  <!-- jumbotron -->
+  <div class="jumbotron jumbotron-fluid" id="titleBackground">
+    <!-- jumbotron image -->
+    <img src="images/title.png" alt="pokemon logo" class="img-responsive">
 
+    <audio controls loop>
+      <source src="audio/103.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+
+  </div>
+
+
+  <!-- First row -->
+  <div class="container">
+    <div class="row">
+
+
+
+      <div class="col-lg-6">
+        <p class="top-text">Welcome to Professor Oak’s Pokemon Love Calculator! The Professor has calculated a
+          precise formula to determine whether you and someone you fancy are truly compatible! Along with your love
+          compatibility rating, Professor Oak will scroll through his Pokedex and choose a Pokemon that best describes
+          your chances of making it work! Enter your names below to test your compatibility
+          – if you dare!</p>
+      </div>
+
+      <div class="col-lg-6">
+
+        <form>
+          <div class="form-group">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input type="text" class="form-control" id="myName" placeholder="Type your name">
+          </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Password</label> -->
+            <input type="text" class="form-control" id="anotherName" placeholder="Type name of your potencial match">
+          </div>
+          <!-- <button type="submit" class="btn btn-primary">Let's calculate</button> -->
+
+          <button type="button" id="buttonID" class="btn btn-primary btn-lg btn-block">Let's calculate</button>
+
+
+        </form>
+      </div>
     </div>
 
-  
+
+    <!-- Second Row / Result display field -->
+
+    <div class="row" id="resultDisplay">
+      <div class="col-lg-6">
+        <!--"Your compatibility rating is:" gets written here-->
+        <h2 id="resultDescription"></h2>
+        <!--The compatibility rating (e.g. 78%) gets written here-->
+        <div id="result"></div>
+      </div>
+      <div class="col-lg-6">
+
+        <!-- Name of Pokemon here -->
+        <h2 id="pokemonChosen"></h2>
+        <!-- PokeMon Image Comes here (Do we add alt text in script.js?) -->
+        <div id="pokemonImage"></div>
+        <!-- Description of Pokemon / Love compatibility goes here -->
+        <p id="pokemonDescription"></p>
+
+        <!-- Button to see score -->
+        <a href="/"><button type="button" class="btn btn-primary btn-lg btn-block" id="scoreBtn">Click here to see
+            the
+            highest scores</button></a>
+      </div>
+    </div>
+
+
     <!-- First row -->
     <div class="container">
-        <div class="row">
+      <div class="row">
 
 
 
-            <div class="col-lg-6">
-                <p class="top-text">Welcome to Professor Oak’s Pokemon Love Calculator! The Professor has calculated a
-                    precise formula to determine whether you and someone you fancy are truly compatible! Along with your love 
-                    compatibility rating, Professor Oak will scroll through his Pokedex and choose a Pokemon that best describes
-                    your chances of making it work! Enter your names below to test your compatibility
-                    – if you dare!</p>
-            </div>
-
-            <div class="col-lg-6">
-
-                <form>
-                    <div class="form-group">
-                        <!-- <label for="exampleInputEmail1">Email address</label> -->
-                        <input type="text" class="form-control" id="myName" placeholder="Type your name">
-                    </div>
-                    <div class="form-group">
-                        <!-- <label for="exampleInputPassword1">Password</label> -->
-                        <input type="text" class="form-control" id="anotherName"
-                            placeholder="Type name of your potencial match">
-                    </div>
-                    <!-- <button type="submit" class="btn btn-primary">Let's calculate</button> -->
-
-                    <button type="button" id="buttonID" class="btn btn-primary btn-lg btn-block">Let's calculate</button>
-
-
-                </form>
-            </div>
+        <div class="col-lg-6">
+          <p class="top-text">Welcome to Professor Oak’s Pokemon Love Calculator! The Professor has calculated a
+            precise formula to determine whether you and someone you fancy are truly compatible! Along with your love
+            compatibility rating, Professor Oak will scroll through his Pokedex and choose a Pokemon that best describes
+            your chances of making it work! Enter your names below to test your compatibility
+            – if you dare!</p>
         </div>
 
+        <div class="col-lg-6">
 
-<!-- Second Row / Result display field -->
-
-        <div class="row" id ="resultDisplay">
-            <div class="col-lg-6">
-                <!--"Your compatibility rating is:" gets written here-->
-
-                <h2 id="resultDescription"></h2>
-
-                <!--The compatibility rating (e.g. 78%) gets written here-->
-                <div id="result">55%</div>
+          <form>
+            <div class="form-group">
+              <!-- <label for="exampleInputEmail1">Email address</label> -->
+              <input type="text" class="form-control" id="myName" placeholder="Type your name">
             </div>
-            <div class="col-lg-6">
-
-                <!-- Name of Pokemon here -->
-                <h2 id="pokemonChosen">faadsaf</h2>
-                <!-- PokeMon Image Comes here (Do we add alt text in script.js?) -->
-                <div id="pokemonImage"></div>
-                <!-- Description of Pokemon / Love compatibility goes here -->
-                <p id="pokemonDescription">adfasfsdfsa</p>
-
-                <!-- Button to see score -->
-                <button type="button" class="btn btn-primary btn-lg btn-block" id="scoreBtn">Click here to see the
-                    highest scores</button>
+            <div class="form-group">
+              <!-- <label for="exampleInputPassword1">Password</label> -->
+              <input type="text" class="form-control" id="anotherName" placeholder="Type name of your potencial match">
             </div>
+            <!-- <button type="submit" class="btn btn-primary">Let's calculate</button> -->
+
+            <button type="button" id="buttonID" class="btn btn-primary btn-lg btn-block">Let's calculate</button>
+
+
+          </form>
         </div>
+      </div>
 
 
-<!-- Third Row / Table display feild -->
-        <div class="row" id ="scoreDispaly">
+      <!-- Second Row / Result display field -->
 
-            <div class="col-lg-12">
-                <!-- PokeMon Image Comes here -->
-                <h2>High Score</h2>
-    
-                <table>
-                    <tr>
-                      <th>Company</th>
-                      <th>Contact</th>
-                      <th>Country</th>
-                    </tr>
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                    </tr>
-                    <tr>
-                      <td>Centro comercial Moctezuma</td>
-                      <td>Francisco Chang</td>
-                      <td>Mexico</td>
-                    </tr>
-                    <tr>
-                      <td>Ernst Handel</td>
-                      <td>Roland Mendel</td>
-                      <td>Austria</td>
-                    </tr>
-                    <tr>
-                      <td>Island Trading</td>
-                      <td>Helen Bennett</td>
-                      <td>UK</td>
-                    </tr>
-                    <tr>
-                      <td>Laughing Bacchus Winecellars</td>
-                      <td>Yoshi Tannamuri</td>
-                      <td>Canada</td>
-                    </tr>
-                    <tr>
-                      <td>Magazzini Alimentari Riuniti</td>
-                      <td>Giovanni Rovelli</td>
-                      <td>Italy</td>
-                    </tr>
-                  </table>
-    
-            </div>
+      <div class="row" id="resultDisplay">
+        <div class="col-lg-6">
+          <!--"Your compatibility rating is:" gets written here-->
+
+          <h2 id="resultDescription"></h2>
+
+          <!--The compatibility rating (e.g. 78%) gets written here-->
+          <div id="result">55%</div>
         </div>
+        <div class="col-lg-6">
+
+          <!-- Name of Pokemon here -->
+          <h2 id="pokemonChosen">faadsaf</h2>
+          <!-- PokeMon Image Comes here (Do we add alt text in script.js?) -->
+          <div id="pokemonImage"></div>
+          <!-- Description of Pokemon / Love compatibility goes here -->
+          <p id="pokemonDescription">adfasfsdfsa</p>
+
+          <!-- Button to see score -->
+          <button type="button" class="btn btn-primary btn-lg btn-block" id="scoreBtn">Click here to see the
+            highest scores</button>
+        </div>
+      </div>
+
+
+      <!-- Third Row / Table display feild -->
+      <div class="row" id="scoreDispaly">
+
+        <div class="col-lg-12">
+          <!-- PokeMon Image Comes here -->
+          <h2>High Score</h2>
+
+          <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Laughing Bacchus Winecellars</td>
+              <td>Yoshi Tannamuri</td>
+              <td>Canada</td>
+            </tr>
+            <tr>
+              <td>Magazzini Alimentari Riuniti</td>
+              <td>Giovanni Rovelli</td>
+              <td>Italy</td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+
+      <!-- Third Row / Table display feild -->
+      <div class="row" id="scoreDispaly">
+
+        <div class="col-lg-12">
+
+          <!-- PokeMon Image Comes here -->
+          <h2>High Score</h2>
+          {{{body}}}
+
+        </div>
+      </div>
 
 
 
