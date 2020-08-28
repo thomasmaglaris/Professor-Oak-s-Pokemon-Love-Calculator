@@ -7,6 +7,11 @@ const { Op } = require("sequelize");
 module.exports = function (app) {
   app.get("/", function (req, res) {
     // res.sendFile(path.join(__dirname, "../public/basicFlame.html"));
+    res.render("index");
+  })
+
+  app.get("/all", function (req, res) {
+    // res.sendFile(path.join(__dirname, "../public/basicFlame.html"));
 
     db.Couple.findAll(
       {
@@ -22,42 +27,9 @@ module.exports = function (app) {
           couplesArr.push(couple);
         });
 
-        res.render("best", {
+        res.render("scores", {
           couple: couplesArr
         });
       });
   })
-
-  // app.get("/best", function (req, res) {
-  //   db.Couple.findAll(
-  //     {
-  //       where: {
-  //         compatability: {
-  //           [Op.or]: {
-  //             [Op.gt]: 50,
-  //             [Op.eq]: null
-  //           },
-  //         },
-  //       },
-  //     })
-  //     .then(function (data) {
-
-  //       var bestCouples = [];
-
-  //       data.forEach(couple => {
-  //         bestCouples.push(couple);
-  //       });
-
-
-
-  //       res.render("best", {
-  //         couple: bestCouples
-  //       });
-  //     });
-  // })
-
-  // app.get("/worst", function (req, res) {
-  //   res.redirect("/api/worst");
-  // })
-
 }
