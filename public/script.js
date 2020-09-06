@@ -1,8 +1,12 @@
+// gets the percentage of the couple, and send fName, sName and the compatibility rating
+//  to the backend to be added to the db
 function getPercentage() {
 
+  // declaration of both names
   var fName = $("#myName").val().trim();
   var sName = $("#anotherName").val().trim();
 
+  // unirest settings
   var settings = {
     "async": true,
     "crossDomain": true,
@@ -14,16 +18,20 @@ function getPercentage() {
     }
   }
 
+  // getting compatibility rating
   $.ajax(settings).done(function (response) {
 
+    // setting compatibility rating to a var
     var compatibility = response.percentage;
 
+    // logging the result for the user
     $("#resultDescription").text("Your compatibility rating is")
     $("#result").text(compatibility + "%");
 
     console.log(response);
     console.log(compatibility);
 
+    // creating a new couple
     var newCouple = {
       name1: fName,
       name2: sName,
@@ -32,15 +40,18 @@ function getPercentage() {
 
     console.log(newCouple);
 
+    // add the couple to the db and alert user it was done
     $.post("/api/new", newCouple).then(function (data) {
       console.log(data);
       alert("Adding couple...");
     });
 
-
+    // list of if statments to determine which pokemon to show
+    // only the first if statement is done as it repeats
     if (compatibility >= 97) {
       var queryURL = `https://pokeapi.co/api/v2/pokemon/ditto`;
 
+      // ajax call to pokeapi
       $.ajax({
         url: queryURL,
         method: "GET"
@@ -48,12 +59,18 @@ function getPercentage() {
 
         .then(function (response) {
           console.log(response.sprites.other.dream_world.front_default);
+
+          // get the image from pokeapi; show to the user.
           var imageURL = response.sprites.other.dream_world.front_default;
           var imageShow = $("<img>").attr("src", imageURL);
           $("#pokemonImage").html(imageShow);
+
+          // show the related pokemon love phrase to the user
           $("#pokemonChosen").text("The Pokemon that best describes your love compatibility is Ditto!");
           $("#pokemonDescription").text("Congratulations it’s a perfect pair! There is so much in common and so much chemistry that it is almost impossible to not see a loving and stable relationship. With so many shared interests and goals, we are confident that the both of you can remain inseparable for years to come!");
         });
+
+      // So on and so on until 0%...
     } else if (compatibility >= 90 && compatibility <= 96) {
       var queryURL = `https://pokeapi.co/api/v2/pokemon/charmander`;
 
@@ -315,7 +332,7 @@ function getPercentage() {
 };
 
 
-
+// declaring eventlistener for buttonID to start the getPercentage func.
 $("#buttonID").on("click", function (event) {
   event.preventDefault();
 

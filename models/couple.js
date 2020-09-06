@@ -1,3 +1,5 @@
+// Exporting Couple obj, has attributes name1, name2 and compatibility rating.
+
 module.exports = function (sequelize, DataTypes) {
   const Couple = sequelize.define("Couple", {
     name1: {
